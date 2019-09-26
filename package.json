@@ -6,6 +6,10 @@
   "author": "Vbobell <vinicius.bobel41@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
