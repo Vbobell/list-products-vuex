@@ -9,7 +9,7 @@ export default new Vuex.Store({
             'id': 1,
             'name': 'TV'
         }, {
-            'id':2,
+            'id': 2,
             'name': 'Computer'
         }]
     },
@@ -19,10 +19,14 @@ export default new Vuex.Store({
     },
 
     mutations: {
-
+        buyProduct(state, id) {
+            state.products = state.products.filter((product) => product.id != id);
+        }
     },
 
     actions: {
-
+        buyProduct(context, id) {
+            context.commit('buyProduct', id);
+        }
     }
 });
