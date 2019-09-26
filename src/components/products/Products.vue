@@ -9,7 +9,7 @@
       <tr v-for="product in parentData.products" :key="product.id">
         <td>{{ product.name }}</td>
         <td>
-          <button @click="buyProduct(product.id)">Comprar</button>
+          <button @click="buyProduct(product.id)">Buy</button>
         </td>
       </tr>
     </tbody>
