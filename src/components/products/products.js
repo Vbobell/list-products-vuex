@@ -1,6 +1,8 @@
 export default {
-    props: {
-        parentData: Object
+    computed: {
+        products() {
+            return this.$store.state.products
+        }
     },
     methods: {
         buyProduct(id) {

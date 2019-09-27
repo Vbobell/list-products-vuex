@@ -1,7 +1,7 @@
 <template>
   <div class="customer">
     <Title :parentData="{ title: 'List products' }"></Title>
-    <Products :parentData="{ products: products }"></Products>
+    <Products></Products>
   </div>
 </template>
 

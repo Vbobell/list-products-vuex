@@ -6,7 +6,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="product in parentData.products" :key="product.id">
+      <tr v-for="product in products" :key="product.id">
         <td>{{ product.name }}</td>
         <td>
           <button @click="buyProduct(product.id)">Buy</button>
