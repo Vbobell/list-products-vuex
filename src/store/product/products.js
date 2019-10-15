@@ -12,32 +12,16 @@ export default {
     },
 
     getters: {
-
+        products: state => {
+            return state.list
+        }
     },
 
     mutations: {
-        buyProduct(state, id) {
-            let productNow;
 
-            state.list = state.list.map((product) => {
-                if (product.id == id) {
-                    product.amount--;
-                }
-
-                return product;
-            });
-            
-            productNow = state.list.filter((product) => product.id == id);
-
-            if (productNow.length > 0 && productNow[0].amount == 0) {
-                state.list = state.list.filter((product) => product.id != id);
-            }
-        }
     },
 
     actions: {
-        buyProduct(context, id) {
-            context.commit('buyProduct', id);
-        }
+
     }
 }

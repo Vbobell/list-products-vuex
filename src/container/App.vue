@@ -2,6 +2,7 @@
   <div class="customer">
     <Title :parentData="{ title: 'List products' }"></Title>
     <Products></Products>
+    <Cart></Cart>
   </div>
 </template>
 

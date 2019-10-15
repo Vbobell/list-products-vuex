@@ -5,8 +5,8 @@ export default {
         }
     },
     methods: {
-        buyProduct(id) {
-            this.$store.dispatch('buyProduct', id);
+        addToCart(id) {
+            this.$store.dispatch('addToCart', id);
         }
     }
 }
