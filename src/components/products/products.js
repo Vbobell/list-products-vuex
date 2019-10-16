@@ -7,6 +7,7 @@ export default {
     methods: {
         addToCart(id) {
             this.$store.dispatch('addToCart', id);
+            this.$store.dispatch('decrementProduct', id);
         }
     }
 }

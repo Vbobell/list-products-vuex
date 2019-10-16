@@ -18,7 +18,7 @@ export default {
             productNow = products.filter((product) => product.id == id);
             
             if (productNow.length > 0) {
-                Vue.set(state, 'list', [...productNow]);
+                state.list.push(productNow[0]);
             }
         }
     },
