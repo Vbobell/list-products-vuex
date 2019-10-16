@@ -1,16 +1,13 @@
 <template>
-  <table>
-    <thead>
-      <tr>
-        <th>Cart</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="c in cart" :key="c.id">
-        <td>{{ c.name }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <section>
+    <h2>Cart</h2>
+    <ul>
+      <li v-for="c in cart" :key="c.id">
+          <label>{{ c.name }}</label>
+          <span>{{ c.amount }}</span>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script src="./cart.js"></script>

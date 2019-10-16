@@ -13,12 +13,30 @@ export default {
 
     mutations: {
         addToCart(state, { products, id }) {
-            let productNow;
+            let productNow, productCart;
 
             productNow = products.filter((product) => product.id == id);
             
             if (productNow.length > 0) {
-                state.list.push(productNow[0]);
+                productCart = state.list.filter((product) => product.id == id);
+
+                if (productCart.length > 0) {
+                    state.list = state.list.map((product) => {
+                        if (product.id == id) {
+                            Vue.set(product, 'amount', product.amount+=1);
+                        }
+
+                        return product;
+                    });
+                } else {
+                    let { id, name } = productNow[0];
+
+                    state.list.push({
+                        id,
+                        name,
+                        amount: 1
+                    });
+                }
             }
         }
     },
