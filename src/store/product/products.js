@@ -1,13 +1,11 @@
+import Vue from 'vue';
+
 export default {
     state: {
         list: [{
-            'id': 1,
-            'name': 'TV',
-            'amount': 4
-        }, {
-            'id': 2,
-            'name': 'Computer',
-            'amount': 2
+            'id': 0,
+            'name': 'Não há produtos',
+            'amount': 0
         }]
     },
 
@@ -34,12 +32,18 @@ export default {
             if (productNow.length > 0 && productNow[0].amount == 0) {
                 state.list = state.list.filter((product) => product.id != id);
             }
+        },
+        setProducts(state, { products }) {
+            Vue.set(state, 'list', products);
         }
     },
 
     actions: {
         decrementProduct({ commit }, id) {
             commit('decrementProduct', { id });
+        },
+        setProducts({ commit }, products) {
+            commit('setProducts', { products });
         }
     }
 }
